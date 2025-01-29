@@ -75,6 +75,33 @@
             #endregion
 
 
+            #region LINQ Syntax
+            #region Fluent Syntax
+            /// List<int> Numbers = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            ///  //1.Fluent Syntax
+            ///  //1.1 Call "LINQ operator " as static Method Throug Enumrable 
+            ///  var OddNumber = Enumerable.Where<int>(Numbers, Numbers => Numbers % 2 == 1);
+            ///
+            ///  //2.1 call "LINQ Operator " as Extension Mthod
+            ///  OddNumber =Numbers.Where(N=>N%2 == 1);
+            ///
+            ///  foreach(int n in OddNumber) Console.WriteLine(n);
+            #endregion
+
+            #region Query Syntax 
+            ///   //2.Query Syntax 
+            ///   //Query Expression like (Sql Server)
+            ///   List<int> Numbers = new List<int>(10) { 1, 2, 3, 4, 5,6,7,8,9};
+            ///   var OddNumbers = from N in Numbers
+            ///                    where N % 2 == 1
+            ///                    select N;
+            ///
+            ///   foreach(var Odd in OddNumbers) Console.WriteLine(Odd);
+
+            #endregion 
+            #endregion
+
+
         }
     }
 }
