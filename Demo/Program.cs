@@ -54,7 +54,12 @@
             ///    Console.WriteLine(Product.GetType().Name);//AnonymousType2`2 
             #endregion
 
-
+            #region Extenstion Method 
+            ///  int X = 12345;
+            ///  int Y = IntExtension.Reverse(X);
+            ///  Y = X.Reverse();
+            ///  Console.WriteLine(Y); 
+            #endregion
 
 
 
