@@ -61,6 +61,18 @@
             ///  Console.WriteLine(Y); 
             #endregion
 
+            #region What's LINQ 
+
+            /// List<int>Numbers = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            /// List<int>Odds = Numbers.Where(Numbers=>Numbers%2==1).ToList();
+            /// Numbers.AddRange([11, 12, 13, 14, 15]);
+            /// foreach(int odd in Odds)Console.WriteLine(odd); // 1 3 5 7  9
+
+            ///   List<int> Numbers = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            ///  var Odds = Numbers.Where(Numbers => Numbers % 2 == 1);
+            ///   Numbers.AddRange([11, 12, 13, 14, 15]);
+            ///   foreach (int odd in Odds) Console.WriteLine(odd); // 1 3 5 7 9 11 13 15  
+            #endregion
 
 
         }
