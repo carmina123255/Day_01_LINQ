@@ -34,7 +34,6 @@
 
             #endregion
 
-
             #region Anonymous Type 
             ///    object emp01 = new { Id = 10, Name = "aa", Salary = 80_000 };
             ///    //Console.WriteLine(emp01.Id) //InValid
@@ -74,7 +73,6 @@
             ///   foreach (int odd in Odds) Console.WriteLine(odd); // 1 3 5 7 9 11 13 15  
             #endregion
 
-
             #region LINQ Syntax
             #region Fluent Syntax
             /// List<int> Numbers = new List<int>(10) { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -98,10 +96,28 @@
             ///
             ///   foreach(var Odd in OddNumbers) Console.WriteLine(Odd);
 
-            #endregion 
+            #endregion
             #endregion
 
+            #region LINQ Execution Ways 
+            #region Differed Execution 
+            /// //Differed Execution (Latest version of Data)
+            ///
+            /// List<int>Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            /// var Result = Numbers.Where(N => N % 2 == 1);
+            /// Numbers.AddRange([11, 12, 13, 14, 15]);
+            /// foreach(int n in Result) Console.WriteLine(n);//1 3 5 7 9 11 13 15
 
+            #endregion
+
+            #region Immutable Execution 
+            //Immutable Execution [Element operator , casting Operator , Aggregate Operator ]
+            List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            var Result = Numbers.Where(N => N % 2 == 1).ToList();
+            Numbers.AddRange([11, 12, 13, 14, 15]);
+            foreach (int n in Result) Console.WriteLine(n);//1 3 5 7 9
+            #endregion 
+            #endregion
         }
     }
 }
