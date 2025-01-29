@@ -1,4 +1,5 @@
-﻿namespace Demo
+﻿using static Demo.ListGenerators;
+namespace Demo
 {
     internal class Program
     {
@@ -111,13 +112,42 @@
             #endregion
 
             #region Immutable Execution 
-            //Immutable Execution [Element operator , casting Operator , Aggregate Operator ]
-            List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            var Result = Numbers.Where(N => N % 2 == 1).ToList();
-            Numbers.AddRange([11, 12, 13, 14, 15]);
-            foreach (int n in Result) Console.WriteLine(n);//1 3 5 7 9
-            #endregion 
+            /// //Immutable Execution [Element operator , casting Operator , Aggregate Operator ]
+            /// List<int> Numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            /// var Result = Numbers.Where(N => N % 2 == 1).ToList();
+            /// Numbers.AddRange([11, 12, 13, 14, 15]);
+            /// foreach (int n in Result) Console.WriteLine(n);//1 3 5 7 9
             #endregion
+            #endregion
+
+
+            #region Filteration (Restriction) Operators : [Where -OfType]
+            ///  var Result = ProductList.Where(p => p.UnitsInStock == 0);
+            /// 
+            ///  Result = from P in ProductList
+            ///           where P.UnitsInStock == 0
+            ///         select P;
+
+
+            /// var Result = ProductList.Where(P => P.UnitsInStock == 0 && P.Category == "Meat/Poultry");
+            ///
+            ///     Result = from P in ProductList
+            ///          where P.UnitsInStock == 0 && P.Category == "Meat/Poultry"
+            ///          select P; 
+
+            ///  // Indexed Where
+            ///  var Result = ProductList.Where((P, I) => I < 10 && P.UnitsInStock == 0);
+            ///  //Indexed Where can't write in Fluent expression Only 
+
+            ///   //OfType
+            ///   var Result =ProductList.OfType<Product2>();
+
+            #endregion
+
+
+
+            // foreach (var item in Result)Console.WriteLine(item);
+
         }
     }
 }
