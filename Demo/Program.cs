@@ -208,24 +208,72 @@ namespace Demo
             ///           select O;
             ///           
 
-         ///   var result = CustomerList.SelectMany(C => C.Orders!, (Customer, Order) => new
-         ///   {
-         ///       Customer,
-         ///       Order
-         ///   });
-         ///
-         ///   result = from C in CustomerList
-         ///            from O in C.Orders!
-         ///            select new { Customer = C, Order = O };
-         ///
-         ///   foreach (var item in result) Console.WriteLine($"{item.Customer.CustomerName} :: {item.Order} ");
+            ///   var result = CustomerList.SelectMany(C => C.Orders!, (Customer, Order) => new
+            ///   {
+            ///       Customer,
+            ///       Order
+            ///   });
+            ///
+            ///   result = from C in CustomerList
+            ///            from O in C.Orders!
+            ///            select new { Customer = C, Order = O };
+            ///
+            ///   foreach (var item in result) Console.WriteLine($"{item.Customer.CustomerName} :: {item.Order} ");
             #endregion
 
 
             #endregion
 
+            #region Ordering Operator 
 
-           // foreach (var item in Result)Console.WriteLine(item);
+            /// var Result = ProductList.Order();
+            /// 
+            /// Result = from P in ProductList
+            ///          orderby P.UnitPrice
+            ///          select P;
+
+            ///  var Result = ProductList.OrderDescending();
+            /// 
+            ///  Result = from P in ProductList
+            ///           orderby P.UnitPrice descending 
+            ///           select P;
+            ///  
+
+
+            ///    var Result = ProductList.OrderBy(P=>P.UnitPrice);
+            ///
+            ///   Result = from P in ProductList
+            ///            orderby P.UnitPrice
+            ///            select P;
+            ///    
+
+            ///   var Result = ProductList.OrderByDescending(P=>P.UnitPrice);
+            ///
+            ///   Result = from P in ProductList
+            ///            orderby P.UnitPrice descending
+            ///            select P;
+            ///            
+
+
+            ///    var Result = ProductList.OrderBy(P => P.UnitPrice).ThenBy(P=>P.UnitsInStock);
+            /// 
+            ///    Result = from P in ProductList
+            ///             orderby P.UnitPrice, P.UnitsInStock
+            ///                select P;
+            ///                
+
+            ///  var Result = ProductList.OrderBy(P => P.UnitPrice).ThenByDescending(P=>P.UnitsInStock);
+            /// 
+            ///    Result = from P in ProductList
+            ///             orderby P.UnitPrice,P.UnitsInStock descending
+            ///             select P;
+            ///             
+
+            ///var Result = ProductList.Where(P => P.UnitsInStock == 0).Reverse();
+            #endregion
+
+
+            ///foreach (var item in Result)Console.WriteLine(item);
 
         }
     }
