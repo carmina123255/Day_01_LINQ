@@ -262,23 +262,42 @@ namespace Assignment
             ///  foreach( var x in Result) Console.WriteLine(x); 
             #endregion
 
-           /// 5.Returns all pairs of numbers from both arrays such that the number from numbersA 
-           /// is less than the number from numbersB.
-           /// 
+            #region Q05 
 
-          
-            int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
-            int[] numbersB = { 1, 3, 5, 7, 8 };
+            /// 5.Returns all pairs of numbers from both arrays such that the number from numbersA 
+            /// is less than the number from numbersB.
+            /// 
 
 
-        
-           var  Result = from a in numbersA
-                     from b in numbersB
-                     where a < b
-                     select ($"{a}  is less than, {b}");
+            ///   int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            ///   int[] numbersB = { 1, 3, 5, 7, 8 };
+            /// 
+            /// 
+            /// 
+            ///  var  Result = from a in numbersA
+            ///            from b in numbersB
+            ///            where a < b
+            ///            select ($"{a}  is less than, {b}");
+            /// 
+            ///   Console.WriteLine("Pairs where a < b: ");
+            ///   foreach( var result in Result ) Console.WriteLine(result); 
+            #endregion
 
-            Console.WriteLine("Pairs where a < b: ");
-            foreach( var result in Result ) Console.WriteLine(result);
+            #region Q06 
+            //6.Select all orders where the order total is less than 500.00.
+
+            ///  var Result = CustomerList.SelectMany(o => o.Orders, (c, o) => new { c, o })
+            ///                         .Where(l => l.o.Total < 500.00M)
+            ///                         .Select(l => l.o);
+            ///
+            ///   Result = from C in CustomerList
+            ///           from O in C.Orders
+            ///           where O.Total < 500.00M
+            ///           select O;
+            ///
+            ///
+            ///  foreach (var result in Result) Console.WriteLine(result); 
+            #endregion
 
             #endregion
         }
