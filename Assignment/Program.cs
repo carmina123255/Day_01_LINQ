@@ -2,6 +2,7 @@
 using System.Collections.Immutable;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography;
 using static Assignment.ListGenerator;
 namespace Assignment
 {
@@ -200,6 +201,25 @@ namespace Assignment
             ///          select P.ProductName;
             ///
             /// foreach (var P in Result) Console.WriteLine(P); 
+            #endregion
+
+            #region Q02 
+            ///2. Produce a sequence of the uppercase and lowercase versions of each word in the original array (Anonymous Types).
+
+            ///   string[] words = { "aPPLE", "BlUeBeRrY", "cHeRry" };
+            ///   var Result = words.Select(w => new
+            ///   {
+            ///       Lower = w.ToLower(),
+            ///       Upper = w.ToUpper()
+            ///   });
+            ///
+            ///   Result = from w in words
+            ///            select new
+            ///            {
+            ///                Lower = w.ToLower(),
+            ///                Upper = w.ToUpper()
+            ///            };
+            ///   foreach (var word in Result) Console.WriteLine(word); 
             #endregion
 
             #endregion
