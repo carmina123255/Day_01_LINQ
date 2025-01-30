@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
 using static Assignment.ListGenerator;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Assignment
 {
     class CaseSensitive : IComparer<string>
@@ -261,9 +262,23 @@ namespace Assignment
             ///  foreach( var x in Result) Console.WriteLine(x); 
             #endregion
 
+           /// 5.Returns all pairs of numbers from both arrays such that the number from numbersA 
+           /// is less than the number from numbersB.
+           /// 
+
+          
+            int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+            int[] numbersB = { 1, 3, 5, 7, 8 };
 
 
+        
+           var  Result = from a in numbersA
+                     from b in numbersB
+                     where a < b
+                     select ($"{a}  is less than, {b}");
 
+            Console.WriteLine("Pairs where a < b: ");
+            foreach( var result in Result ) Console.WriteLine(result);
 
             #endregion
         }
