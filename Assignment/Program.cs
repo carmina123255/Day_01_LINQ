@@ -251,6 +251,18 @@ namespace Assignment
             ///   foreach(var P in Result) Console.WriteLine(P); 
             #endregion
 
+            #region Q04 
+            ///Determine if the value of ints in an array match their position in the array.
+
+
+            ///  int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            ///  var Result = Arr.Select((X, I) =>((X==I )? $"{X} : True" : $"{X} : False"));
+            ///
+            ///  foreach( var x in Result) Console.WriteLine(x); 
+            #endregion
+
+
+
 
 
             #endregion
