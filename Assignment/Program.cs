@@ -182,9 +182,26 @@ namespace Assignment
             ///             where P.Length > 0 && P[1] == 'i'
             ///             select P).Reverse();
             /// 
-            #endregion
 
             /// foreach (var X in Result) Console.WriteLine(X);
+            #endregion
+
+            #endregion
+
+            #region Part03 
+
+            #region Q01 
+            ///. Return a sequence of just the names of a list of products.
+            ///
+
+            /// var Result = ProductList.Select(X => X.ProductName);
+            ///
+            /// Result = from P in ProductList
+            ///          select P.ProductName;
+            ///
+            /// foreach (var P in Result) Console.WriteLine(P); 
+            #endregion
+
             #endregion
         }
     }
