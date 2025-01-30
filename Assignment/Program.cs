@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Runtime.ConstrainedExecution;
 using static Assignment.ListGenerator;
 namespace Assignment
@@ -152,7 +153,24 @@ namespace Assignment
             ///    foreach (var P in Result) Console.WriteLine(P); 
             #endregion
 
+            #region Q07 
+
+            /// 7.Sort first by word length and then by a case -insensitive descending sort of the words in an array.
+            /// 
+
+
+            ///   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            ///
+            ///   var Result = Arr.OrderBy(X => X.Length).ThenByDescending(X => X, new CaseSensitive());
+            ///
+            ///   Result = from P in Arr
+            ///             orderby P.Length, P.ToLower() descending
+            ///             select P; 
+            ///    
+            ///   foreach (var x in Result) Console.WriteLine(x); 
+            #endregion
+
             #endregion
         }
-    }
+        }
 }
