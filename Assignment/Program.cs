@@ -81,11 +81,19 @@ namespace Assignment
             ///  Uses a custom comparer to do a case -insensitive sort of the words in an array.
             ///  
 
-            /// string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-            /// Array.Sort(Arr, new CaseSensitive());
-            /// 
-            /// foreach (string str in Arr) Console.WriteLine(str);
-            ///  
+        ///   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+        /// 
+        ///   
+        ///   var Result= Arr.OrderBy(X=>X, new CaseSensitive());
+        /// 
+        ///   Result = from P in Arr
+        ///            orderby P.ToLower()
+        ///            select P;
+        ///             
+        ///   foreach(var X in Result) Console.WriteLine(X);
+            
+           
+             
             #endregion
 
             #region Q03 
@@ -131,6 +139,8 @@ namespace Assignment
             ///   
             ///   foreach (var result in Result) Console.WriteLine(result); 
             #endregion
+
+
 
             #endregion
         }
