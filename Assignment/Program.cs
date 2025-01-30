@@ -222,6 +222,37 @@ namespace Assignment
             ///   foreach (var word in Result) Console.WriteLine(word); 
             #endregion
 
+
+            #region Q03 
+            ///3. Produce a sequence containing some properties of Products, 
+            ///including UnitPrice which is renamed to Price in the resulting type.
+            ///
+
+            ///   var Result = ProductList.Select(X => new
+            ///   {
+            ///       X.ProductID,
+            ///       X.ProductName,
+            ///       X.UnitPrice,
+            ///       Price = X.UnitPrice,
+            ///       X.Category
+            ///   });
+            /// 
+            ///   Result = from P in ProductList
+            ///            select new
+            ///            {
+            ///                P.ProductID,
+            ///                P.ProductName,
+            ///                P.UnitPrice,
+            ///                Price = P.UnitPrice,
+            ///                P.Category
+            /// 
+            ///            };
+            /// 
+            ///   foreach(var P in Result) Console.WriteLine(P); 
+            #endregion
+
+
+
             #endregion
         }
     }
