@@ -299,6 +299,23 @@ namespace Assignment
             ///  foreach (var result in Result) Console.WriteLine(result); 
             #endregion
 
+            #region Q07 
+            /// Select all orders where the order was made in 1998 or later.
+            /// 
+
+            ///   var Result = CustomerList.SelectMany(o => o.Orders, (c, o) => new { c, o })
+            ///                          .Where(l => l.o.OrderDate.Year >=1998)
+            ///                            .Select(l => l.o);
+            ///   
+            ///      Result = from C in CustomerList
+            ///              from O in C.Orders
+            ///              where O.OrderDate.Year >= 1998
+            ///              select O;
+            ///   
+            ///   
+            ///     foreach (var result in Result) Console.WriteLine(result); 
+            /// 
+            #endregion
             #endregion
         }
     }
