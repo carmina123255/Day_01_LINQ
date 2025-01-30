@@ -100,6 +100,22 @@ namespace Assignment
             ///
             ///   foreach(var result in Result) Console.WriteLine(result); 
             #endregion
+
+            #region Q04 
+            ///4. Sort a list of digits, first by length of their name, and then alphabetically by the name itself.
+            ///
+
+            ///    string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            ///    var Result = Arr.OrderBy(A => A.Length).ThenBy(P=>P);
+            /// 
+            ///    Result = from P in Arr
+            ///             orderby P.Length, P
+            ///             select P;
+            /// 
+            ///    foreach (var A in Result) Console.WriteLine(A);
+            ///   
+            #endregion
+
             #endregion
         }
     }
