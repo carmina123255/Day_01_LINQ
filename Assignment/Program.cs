@@ -34,6 +34,18 @@ namespace Assignment
             ///   foreach(var P in Result) Console.WriteLine(P); 
             #endregion
 
+            #region Q03
+            ///3. Returns digits whose name is shorter than their value.
+            ///
+
+            ///  string[] Arr = { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+            ///
+            ///  var Result = Arr.Where((P, Index) => P.Length < Index);
+            ///
+            ///
+            ///  foreach (var P in Result) Console.WriteLine(P); 
+            #endregion
+
             #endregion
         }
     }
