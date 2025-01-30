@@ -145,8 +145,87 @@ namespace Demo
             #endregion
 
 
+            #region Transmistion (projection) Select | SelectMany
 
-            // foreach (var item in Result)Console.WriteLine(item);
+            #region Select 
+            //select 
+
+            ///  var Result = ProductList.Select(P => P.ProductName);
+            ///
+            ///  Result = from P in ProductList
+            ///           select P.ProductName;
+
+            ///  var Result = ProductList.Where(p=>p.UnitsInStock>0)
+            ///                           .Select(p=>$"{p.ProductID} :: {p.ProductName} ");
+            ///
+            ///  Result = from P in ProductList
+            ///           where P.UnitsInStock > 0
+            ///           select $"{P.ProductID} {P.ProductName}";
+            ///           
+
+            ///    var Result = ProductList.Where(p => p.UnitsInStock > 0)
+            ///                            .Select(p=>new  { p.ProductID ,p.ProductName});
+            /// 
+            ///   Result = from P in ProductList
+            ///            where P.UnitsInStock > 0
+            ///            select new {P.ProductID ,P.ProductName};    
+            ///            
+
+            ///    var Result = ProductList.Where(P => P.UnitsInStock > 0)
+            ///                           .Select( P =>new
+            ///                           {
+            ///                               P.ProductID,
+            ///                               P.ProductName,
+            ///                               NewPrice =P.UnitPrice -(P.UnitPrice*0.2M)
+            /// 
+            ///                           });
+            /// 
+            ///    Result = from P in ProductList
+            ///             select new
+            ///             {
+            ///                 P.ProductID,
+            ///                 P.ProductName,
+            ///                 NewPrice = P.UnitPrice - (P.UnitPrice * .2M)
+            ///             };
+
+            //Indexed Select
+
+            ///  var Result = ProductList.Select((P, Index) => new
+            ///  {
+            ///      Index = Index,
+            ///      PName = P.ProductName
+            ///  });
+
+
+            #endregion
+
+
+            #region SelectMany 
+            ///  var Result = CustomerList.SelectMany(C => C.Orders);
+            ///
+            ///  Result = from C in CustomerList
+            ///           from O in C.Orders
+            ///           select O;
+            ///           
+
+         ///   var result = CustomerList.SelectMany(C => C.Orders!, (Customer, Order) => new
+         ///   {
+         ///       Customer,
+         ///       Order
+         ///   });
+         ///
+         ///   result = from C in CustomerList
+         ///            from O in C.Orders!
+         ///            select new { Customer = C, Order = O };
+         ///
+         ///   foreach (var item in result) Console.WriteLine($"{item.Customer.CustomerName} :: {item.Order} ");
+            #endregion
+
+
+            #endregion
+
+
+           // foreach (var item in Result)Console.WriteLine(item);
 
         }
     }
