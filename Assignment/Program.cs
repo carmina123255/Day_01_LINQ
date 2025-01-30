@@ -47,6 +47,26 @@ namespace Assignment
             #endregion
 
             #endregion
+
+
+            #region Part02 
+
+            #region Q01
+            ///Sort a list of products by name
+            ///
+
+            ///  var Result = ProductList.OrderBy(P => P.ProductName);
+            ///
+            ///  Result =from P in ProductList
+            ///          orderby P.ProductName
+            ///          select P;   
+            ///
+            ///  foreach (var result in Result) Console.WriteLine(result); 
+            #endregion
+
+
+
+            #endregion
         }
     }
 }
