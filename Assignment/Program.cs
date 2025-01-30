@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.ConstrainedExecution;
 using static Assignment.ListGenerator;
 namespace Assignment
@@ -170,7 +171,21 @@ namespace Assignment
             ///   foreach (var x in Result) Console.WriteLine(x); 
             #endregion
 
+            #region Q 08 
+            ///8. Create a list of all digits in the array whose second letter is 'i' that is reversed from the order 
+            ///in the original array.
+
+            ///   string[] Arr = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+            ///   var Result = Arr.Where(X => X.Length > 1 && X[1] == 'i').Reverse();
+            ///
+            ///   Result = (from P in Arr
+            ///             where P.Length > 0 && P[1] == 'i'
+            ///             select P).Reverse();
+            /// 
+            #endregion
+
+            /// foreach (var X in Result) Console.WriteLine(X);
             #endregion
         }
-        }
+    }
 }
