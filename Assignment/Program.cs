@@ -1,9 +1,22 @@
-﻿using System.Runtime.ConstrainedExecution;
+﻿using System.Collections.Immutable;
+using System.Runtime.ConstrainedExecution;
 using static Assignment.ListGenerator;
 namespace Assignment
 {
+    class CaseSensitive : IComparer<string>
+    {
+        public int Compare(string? x, string? y)
+        {
+            x = x?.ToLower();
+            y = y?.ToLower();
+            return x.CompareTo(y);
+
+        }
+    }
     internal class Program
     {
+        
+       
         static void Main(string[] args)
         {
             #region Part01 
@@ -64,9 +77,17 @@ namespace Assignment
             ///  foreach (var result in Result) Console.WriteLine(result); 
             #endregion
 
+            #region Q02 
+            ///  Uses a custom comparer to do a case -insensitive sort of the words in an array.
+            ///  
 
-
+            /// string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            /// Array.Sort(Arr, new CaseSensitive());
+            /// 
+            /// foreach (string str in Arr) Console.WriteLine(str);
+            ///  
+            #endregion
             #endregion
         }
-    }
+        }
 }
