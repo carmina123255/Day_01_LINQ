@@ -81,19 +81,19 @@ namespace Assignment
             ///  Uses a custom comparer to do a case -insensitive sort of the words in an array.
             ///  
 
-        ///   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
-        /// 
-        ///   
-        ///   var Result= Arr.OrderBy(X=>X, new CaseSensitive());
-        /// 
-        ///   Result = from P in Arr
-        ///            orderby P.ToLower()
-        ///            select P;
-        ///             
-        ///   foreach(var X in Result) Console.WriteLine(X);
-            
-           
-             
+            ///   string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            /// 
+            ///   
+            ///   var Result= Arr.OrderBy(X=>X, new CaseSensitive());
+            /// 
+            ///   Result = from P in Arr
+            ///            orderby P.ToLower()
+            ///            select P;
+            ///             
+            ///   foreach(var X in Result) Console.WriteLine(X);
+
+
+
             #endregion
 
             #region Q03 
@@ -140,7 +140,17 @@ namespace Assignment
             ///   foreach (var result in Result) Console.WriteLine(result); 
             #endregion
 
+            #region Q06 
+            ///6. Sort a list of products, first by category, and then by unit price, from highest to lowest.
 
+            ///    var Result = ProductList.OrderByDescending(X => X.Category).ThenByDescending(X => X.UnitPrice);
+            ///
+            ///    Result = from P in ProductList
+            ///             orderby P.Category descending,P.UnitPrice descending
+            ///             select P;
+            ///
+            ///    foreach (var P in Result) Console.WriteLine(P); 
+            #endregion
 
             #endregion
         }
