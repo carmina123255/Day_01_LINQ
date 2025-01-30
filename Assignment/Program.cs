@@ -116,6 +116,22 @@ namespace Assignment
             ///   
             #endregion
 
+            #region Q05 
+            ///5. Sort first by word length and then by a case-insensitive sort of the words in an array.
+            ///
+
+
+            ///   string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+            ///  
+            ///   var Result = words.OrderBy(X=>X.Length).ThenBy(x=>x,StringComparer.OrdinalIgnoreCase);
+            ///
+            ///   Result = from P in words
+            ///            orderby P.Length, P.ToLower()
+            ///            select P; 
+            ///   
+            ///   foreach (var result in Result) Console.WriteLine(result); 
+            #endregion
+
             #endregion
         }
     }
