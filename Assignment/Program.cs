@@ -87,7 +87,20 @@ namespace Assignment
             /// foreach (string str in Arr) Console.WriteLine(str);
             ///  
             #endregion
+
+            #region Q03 
+            ///3. Sort a list of products by units in stock from highest to lowest.
+            ///
+
+            ///   var Result = ProductList.OrderByDescending(P => P.UnitsInStock);
+            ///
+            ///   Result =from P in ProductList
+            ///           orderby P.UnitsInStock descending
+            ///           select P;   
+            ///
+            ///   foreach(var result in Result) Console.WriteLine(result); 
+            #endregion
             #endregion
         }
-        }
+    }
 }
